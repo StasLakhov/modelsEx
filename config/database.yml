@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: stas_development
+  username: stas_app
+  password: pass1234
+
+production:
+  <<: *default
+  database: stas_production
+  username: stas_app
+  password: pass1234
+
+test:
+  <<: *default
+  database: stas_test
+  username: stas_app
+  password: pass1234
